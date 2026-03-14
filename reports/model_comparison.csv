@@ -1,0 +1,4 @@
+Model,Accuracy,F1,Recall (churn)
+Baseline (dummy),0.50,0.39,0.50
+Logistic Regression,0.78,0.57,0.62
+XGBoost,0.75,0.60,0.68
