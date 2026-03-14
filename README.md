@@ -30,6 +30,25 @@ Each customer gets a churn prediction (0/1) and a probability. Example: [reports
 
 ---
 
+## What this project shows
+
+- **EDA** – Churn distribution, correlations, tenure and contract behavior, cohort retention.
+- **Feature engineering** – Categorical encoding (one-hot), numeric cleaning; tree-based model so no scaling.
+- **Model comparison** – Baseline (dummy), Logistic Regression, XGBoost; metrics table and visuals.
+- **Interpretability** – SHAP (which variables drive churn); feature importance in the notebook.
+
+---
+
+## Business insights (Telco dataset)
+
+- Month-to-month contracts are associated with much higher churn than one- or two-year contracts.
+- Lower tenure (newer customers) is associated with higher churn risk.
+- Higher monthly charges, when combined with month-to-month contracts, tend to increase churn.
+
+*(Run the EDA notebook to reproduce and extend these.)*
+
+---
+
 ## Cómo lo corro (resumen)
 
 **Sí tienes que instalar** las librerías una vez. Luego solo necesitas el CSV de datos.
@@ -55,7 +74,10 @@ Each customer gets a churn prediction (0/1) and a probability. Example: [reports
    ```
    Se genera `reports/predictions.csv`.
 
-**Opcional:** para ver todo el análisis y la comparación de modelos, abre y ejecuta los notebooks en orden: `01_eda_churn.ipynb` → `02_modelado_churn.ipynb`.
+**Opcional**
+- Notebooks: abre y ejecuta en orden `01_eda_churn.ipynb` → `02_modelado_churn.ipynb`.
+- **Dashboard:** `streamlit run src/dashboard.py` (filtros por contrato, vista de datos).
+- **API:** `uvicorn src.api:app --reload` (desde la carpeta del proyecto). Luego `POST http://localhost:8000/predict` con body `{"features": {"col1": val1, "col2": val2, ...}}` usando los nombres de columnas que guardó el entrenamiento (ver `models/columnas.pkl` o una fila de `reports/predictions_sample.csv` + preparar_datos para ver la lista).
 
 ---
 
@@ -118,7 +140,8 @@ After running once, you can commit these files so the repo clearly shows the pro
 │   ├── train.py
 │   ├── predict.py
 │   ├── evaluate.py
-│   └── dashboard.py
+│   ├── dashboard.py
+│   └── api.py          # FastAPI: POST /predict
 ├── requirements.txt
 ├── LICENSE
 └── README.md
