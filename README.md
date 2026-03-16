@@ -115,7 +115,10 @@ python src/predict.py
 Optional:
 
 - Run the notebooks in order for full EDA and model comparison (baseline, logistic regression, XGBoost).
-- Dashboard: `streamlit run src/dashboard.py`
+- **Dashboard:** `streamlit run src/dashboard.py`  
+  - Overview: churn rate and churn by contract type (bar charts).  
+  - Segment explorer: filters by contract, tenure and monthly charges.  
+  - Quick scoring: small form to see the model’s churn prediction for a synthetic customer.
 
 ## Results you’ll get
 
