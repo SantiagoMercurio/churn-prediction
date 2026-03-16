@@ -1,7 +1,7 @@
 [theme]
-primaryColor = "#ff7f50"          # coral accent for buttons/slider
-backgroundColor = "#050816"      # very dark blue background
-secondaryBackgroundColor = "#111827"  # cards / sidebar
-textColor = "#e5e7eb"            # soft light gray
+primaryColor = "#d97706"          # warm orange accent
+backgroundColor = "#f5f0e6"      # light beige background
+secondaryBackgroundColor = "#e5dac7"  # slightly darker beige for panels
+textColor = "#1f2933"            # dark gray text
 font = "sans serif"
 
