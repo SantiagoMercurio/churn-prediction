@@ -1,0 +1,7 @@
+[theme]
+primaryColor = "#ff7f50"          # coral accent for buttons/slider
+backgroundColor = "#050816"      # very dark blue background
+secondaryBackgroundColor = "#111827"  # cards / sidebar
+textColor = "#e5e7eb"            # soft light gray
+font = "sans serif"
+
