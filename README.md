@@ -1,4 +1,5 @@
 # Churn prediction
+<img width="860" height="607" alt="image" src="https://github.com/user-attachments/assets/1d71b138-96c1-45da-968a-5f2082e28010" />
 
 Predict which customers are most likely to leave (churn), with cohort analysis and explainability (SHAP).
 
